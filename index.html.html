@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     EDIT ZONE — everything you need to personalize is right here.
+     ============================================================ */
+</style>
+</head>
+<body>
+
+<script>
+  /* ============================================================
+     🎂 EDIT ZONE — fill these in, nothing else needs to change
+     ============================================================ */
+
+  // Her name — shown on the final page
+  const NAME = "Kshama";
+
+  // The password is her birthdate. Any of these formats will work
+  // when typed in: 13/8/2004, 13-8-2004, 13082004, 13/08/2004
+  const PASSWORD_DIGITS = "13082004";
+
+  // Your personal birthday message — write it here, plain text.
+  // Line breaks you type here will show up on the page.
+  const MESSAGE = `Baby happy birthday to uh.Bby want say uh something that I love uh and may be e 7 years athva nan jote edidu Ning hell athva worst agirbeku gotila but nin jote kaldirod prathi ond second dina kuda nanp erate prathi second kuda spl agirate and I promised uh that uh r my last nin birthday ante haltila bby nin hatta situ avela yar hathre nu replace madok agalla even nan hathre maryok agalla tumba nanp ageta chinnu nindu prathi dina nininda doora agtino athva nina yali kalkontini marth bidtini ante hadrike ageta but gotila just be happy and nin admele nan life li yaru baralla bby gothu nin baralla nan life li but wait madtini nin madve hindin dinad  tanka I sware  nin bit yarnu yochne kuda  madok agtila bby....
+
+Ok bby bidu evela helok tumba eda so ningu bore bareta evala kelkond soo I'm sry for  everything and I just love love love uh bby
+
+Happiest born day chinnaa...mis uh`;
+
+  // Recap of 21 — paste image URLs (or local file paths like
+  // "photos/1.jpg" if you keep an images folder next to this file)
+  // between the quotes below, one per line. Leave any slot empty
+  // and it'll just show a placeholder frame.
+  const PHOTOS = [
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.48.08 PM.jpeg", 
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.48.09 PM.jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.10 PM (1).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.11 PM.jpeg", 
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.10 PM.jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.11 PM (1).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.11 PM (2).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.12 PM (1).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.12 PM (2).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.12 PM.jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.13 PM.jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.16 PM (1).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 4.52.00 PM.jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.17 PM (1).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.17 PM (2).jpeg",
+    "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 4.52.01 PM.jpeg",
+     "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.18 PM (1).jpeg",
+     "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.18 PM.jpeg",
+     "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.19 PM (1).jpeg",
+     "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 3.54.19 PM.jpeg",
+     "C:\\Users\\DINSHI\\OneDrive\\Pictures\\darshan lover\\WhatsApp Image 2026-08-09 at 4.27.21 PM.jpeg"
+     
+  ];
+
+  /* ============================================================
+     End of edit zone — the rest is the site itself.
+     ============================================================ */
+</script>
+
+<div id="app"></div>
+
+<style>
+  :root{
+    --night: #2b0f18;
+    --night-2: #3a1420;
+    --night-3: #4a1a28;
+    --gold: #e0405a;
+    --gold-soft: #ff7a8f;
+    --blush: #ff9eb0;
+    --cream: #fdf0ee;
+    --cream-dim: #e3b8bf;
+    --wine: #7a1f3d;
+    --display: 'Cormorant Garamond', serif;
+    --body: 'Jost', sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin:0; padding:0; height:100%;
+    background: radial-gradient(ellipse at 50% -10%, var(--night-3), var(--night) 60%);
+    color: var(--cream);
+    font-family: var(--body);
+    overflow-x:hidden;
+  }
+
+  body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+  }
+
+  #app{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  /* ambient stars */
+  .stars{
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+  }
+  .star{
+    position:absolute; width:2px; height:2px; border-radius:50%;
+    background: var(--gold-soft); opacity:.5;
+    animation: twinkle 3.5s ease-in-out infinite;
+  }
+  @keyframes twinkle{ 0%,100%{opacity:.15} 50%{opacity:.8} }
+
+  .screen{
+    width:100%; max-width:560px;
+    padding: 48px 32px;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    position:relative; z-index:1;
+    animation: rise .8s ease both;
+  }
+  .screen.active{ display:flex; }
+
+  @keyframes rise{
+    from{ opacity:0; transform: translateY(18px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .screen{ animation: none; }
+  }
+
+  .eyebrow{
+    font-family: var(--body);
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  h1{
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 48px);
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+
+  p.lead{
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--cream-dim);
+    margin: 0 0 28px;
+    max-width: 440px;
+  }
+
+  /* ---------- Candle / cake mark used as a recurring motif ---------- */
+  .mark{
+    width: 46px; height: 66px;
+    margin-bottom: 26px;
+    position: relative;
+  }
+  .mark .stick{
+    position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+    width:10px; height:38px;
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    border-radius: 3px;
+  }
+  .mark .wick{
+    position:absolute; left:50%; bottom:38px; transform:translateX(-50%);
+    width:2px; height:8px; background:#3a2a1a;
+  }
+  .mark .flame{
+    position:absolute; left:50%; bottom:44px; transform:translateX(-50%);
+    width:14px; height:20px;
+    background: radial-gradient(circle at 50% 70%, #fff6d8 0%, var(--gold-soft) 40%, var(--blush) 80%, transparent 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1.6s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px var(--gold));
+  }
+  @keyframes flicker{
+    0%,100%{ transform: translateX(-50%) rotate(-2deg) scaleY(1); }
+    50%{ transform: translateX(-50%) rotate(2deg) scaleY(1.08); }
+  }
+
+  /* ---------- Buttons / inputs ---------- */
+  .btn{
+    font-family: var(--body);
+    font-size: 14px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--night);
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+    border: none;
+    padding: 14px 34px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 24px -8px rgba(232,179,77,.6);
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn:focus-visible{ outline: 2px solid var(--cream); outline-offset: 3px; }
+  .btn:active{ transform: translateY(0); }
+  .btn.ghost{
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(247,239,227,.35);
+    box-shadow:none;
+  }
+
+  input[type="text"]{
+    font-family: var(--display);
+    font-size: 22px;
+    letter-spacing: .1em;
+    text-align:center;
+    color: var(--cream);
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(247,239,227,.25);
+    border-radius: 12px;
+    padding: 14px 18px;
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 14px;
+  }
+  input[type="text"]:focus-visible{ outline: 2px solid var(--gold); }
+  input::placeholder{ color: rgba(247,239,227,.35); letter-spacing:.05em; }
+
+  .hint{ font-size: 12px; color: var(--cream-dim); opacity:.7; margin-top: 4px; }
+  .error{ font-size: 13px; color: var(--blush); min-height: 18px; margin-bottom: 4px; }
+
+  /* ---------- Password screen cake icon ---------- */
+  .cake-icon{ font-size: 56px; margin-bottom: 18px; filter: drop-shadow(0 8px 18px rgba(232,179,77,.35)); }
+
+  /* ---------- Message screen ---------- */
+  .message-box{
+    font-family: var(--display);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--cream);
+    white-space: pre-wrap;
+    border-top: 1px solid rgba(232,179,77,.3);
+    border-bottom: 1px solid rgba(232,179,77,.3);
+    padding: 26px 4px;
+    margin: 6px 0 32px;
+  }
+  .message-box.empty{ color: var(--cream-dim); opacity:.6; }
+
+  /* ---------- Recap screen ---------- */
+  .recap-frame{
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/5;
+    border-radius: 18px;
+    overflow:hidden;
+    position:relative;
+    background: var(--night-2);
+    border: 1px solid rgba(232,179,77,.25);
+    margin: 8px 0 20px;
+    box-shadow: 0 20px 50px -18px rgba(0,0,0,.6);
+  }
+  .recap-frame img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .recap-frame.fade-in{ animation: recap-fade .5s ease both; }
+  @keyframes recap-fade{
+    from{ opacity:0; transform: scale(1.02); }
+    to{ opacity:1; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .recap-frame.fade-in{ animation: none; }
+  }
+  .recap-frame .placeholder{
+    width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--display); font-size: 15px; color: var(--cream-dim);
+    border: 1px dashed rgba(247,239,227,.25);
+  }
+  .recap-counter{
+    font-family: var(--body); font-size: 12px; letter-spacing:.2em;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 6px;
+  }
+  .recap-nav{ display:flex; gap: 14px; margin-top: 4px; }
+  .recap-nav .btn{ padding: 12px 24px; }
+
+  /* ---------- Chapter transition ---------- */
+  .chapter-num{
+    font-family: var(--display); font-size: 90px; line-height:1;
+    color: var(--gold); margin-bottom: 6px;
+    text-shadow: 0 0 40px rgba(232,179,77,.4);
+  }
+
+  /* ---------- Cake / wish screen ---------- */
+  .big-cake{ font-size: 84px; position:relative; margin-bottom: 8px; }
+  .candle-wrap{
+    width: 26px; height: 60px;
+    margin: -18px auto 22px;
+    position: relative;
+    cursor: pointer;
+  }
+  .candle-wrap .stick{
+    position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+    width:12px; height:34px; border-radius:3px;
+    background: repeating-linear-gradient(180deg, var(--blush) 0 6px, var(--gold-soft) 6px 12px);
+  }
+  .candle-wrap .wick{
+    position:absolute; left:50%; bottom:34px; transform:translateX(-50%);
+    width:2px; height:8px; background:#3a2a1a;
+  }
+  .candle-wrap .flame{
+    position:absolute; left:50%; bottom:40px; transform:translateX(-50%);
+    width:16px; height:24px;
+    background: radial-gradient(circle at 50% 70%, #fff6d8 0%, var(--gold-soft) 40%, var(--blush) 80%, transparent 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px var(--gold));
+    transition: opacity .4s ease, transform .4s ease;
+  }
+  .candle-wrap.out .flame{ opacity:0; transform: translateX(-50%) scale(.2); }
+  .smoke{
+    position:absolute; left:50%; bottom:58px; transform:translateX(-50%);
+    width:6px; height:6px; border-radius:50%;
+    background: rgba(203,191,217,.5);
+    opacity:0; pointer-events:none;
+  }
+  .candle-wrap.out .smoke{ animation: smoke-rise 1.6s ease-out forwards; }
+  @keyframes smoke-rise{
+    0%{ opacity:.6; transform: translateX(-50%) translateY(0) scale(1); }
+    100%{ opacity:0; transform: translateX(-50%) translateY(-46px) scale(3.2); }
+  }
+
+  .blow-btn{ margin-top: 4px; }
+  .blow-progress{
+    width: 180px; height: 4px; border-radius: 999px;
+    background: rgba(247,239,227,.15);
+    margin: 18px 0 6px; overflow:hidden;
+  }
+  .blow-progress .fill{
+    height:100%; width:0%; background: linear-gradient(90deg, var(--blush), var(--gold));
+    transition: width .05s linear;
+  }
+
+  /* ---------- Final screen ---------- */
+  .final-name{
+    font-family: var(--display); font-style: italic;
+    font-size: clamp(30px, 7vw, 46px);
+    color: var(--gold-soft);
+    margin-top: 6px;
+  }
+  .confetti-piece{
+    position: fixed; top: -10px; z-index: 5; border-radius: 2px; pointer-events:none;
+    animation: confetti-fall linear forwards;
+  }
+  @keyframes confetti-fall{
+    to{ transform: translateY(110vh) rotate(540deg); opacity:.9; }
+  }
+
+  footer.sig{
+    margin-top: 40px; font-size: 11px; letter-spacing:.2em; text-transform:uppercase;
+    color: var(--cream-dim); opacity:.4;
+  }
+</style>
+
+<div class="stars" id="stars"></div>
+
+<!-- ================= SCREEN 1 — PASSWORD ================= -->
+<section class="screen active" id="screen-password">
+  <div class="cake-icon">🎂</div>
+  <div class="eyebrow">A little something for you</div>
+  <h1>Before we begin…</h1>
+  <p class="lead">This is just for you. Enter the date to open it.</p>
+  <input type="text" id="password-input" placeholder="DD/MM/YYYY" autocomplete="off" inputmode="numeric">
+  <div class="error" id="password-error"></div>
+  <button class="btn" id="unlock-btn">Unlock</button>
+  <div class="hint">a date only you would know</div>
+</section>
+
+<!-- ================= SCREEN 2 — MESSAGE ================= -->
+<section class="screen" id="screen-message">
+  <div class="mark"><div class="stick"></div><div class="wick"></div><div class="flame"></div></div>
+  <div class="eyebrow">For you</div>
+  <h1>A few words</h1>
+  <div class="message-box" id="message-box"></div>
+  <button class="btn" id="to-recap-btn">Continue</button>
+</section>
+
+<!-- ================= SCREEN 3 — RECAP INTRO ================= -->
+<section class="screen" id="screen-recap-intro">
+  <div class="eyebrow">Chapter twenty-one</div>
+  <h1>The recap</h1>
+  <p class="lead">Twenty-one years, one frame at a time. Ready to look back?</p>
+  <button class="btn" id="start-recap-btn">Begin the recap</button>
+</section>
+
+<!-- ================= SCREEN 4 — RECAP SLIDESHOW ================= -->
+<section class="screen" id="screen-recap">
+  <div class="recap-counter" id="recap-counter">1 / 21</div>
+  <div class="recap-frame" id="recap-frame"></div>
+  <div class="recap-nav">
+    <button class="btn ghost" id="recap-prev">Back</button>
+    <button class="btn" id="recap-next">Next</button>
+  </div>
+</section>
+
+<!-- ================= SCREEN 5 — CHAPTER 22 ================= -->
+<section class="screen" id="screen-chapter">
+  <div class="eyebrow">And just like that</div>
+  <div class="chapter-num">22</div>
+  <h1>Welcome to a new chapter</h1>
+  <p class="lead">Twenty-one was only the beginning. Here's to everything twenty-two is about to write &mdash; may it be softer, brighter, and even more yours.</p>
+  <button class="btn" id="to-cake-btn">Continue</button>
+</section>
+
+<!-- ================= SCREEN 6 — MAKE A WISH ================= -->
+<section class="screen" id="screen-cake">
+  <div class="eyebrow">One more thing</div>
+  <h1>Make a wish</h1>
+  <div class="big-cake">🎂</div>
+  <div class="candle-wrap" id="candle">
+    <div class="stick"></div>
+    <div class="wick"></div>
+    <div class="flame"></div>
+    <div class="smoke"></div>
+  </div>
+  <p class="lead" id="cake-instruction">Press and hold the candle to blow it out.</p>
+  <div class="blow-progress"><div class="fill" id="blow-fill"></div></div>
+</section>
+
+<!-- ================= SCREEN 7 — FINAL ================= -->
+<section class="screen" id="screen-final">
+  <div class="eyebrow">Happy Birthday</div>
+  <h1 id="final-heading">Happy Birthday</h1>
+  <div class="final-name" id="final-name"></div>
+  <footer class="sig">made with love, just for you</footer>
+</section>
+
+<script>
+(function(){
+  // ---------- stars background ----------
+  const starsEl = document.getElementById('stars');
+  for(let i=0;i<50;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random()*100+'%';
+    s.style.top = Math.random()*100+'%';
+    s.style.animationDelay = (Math.random()*3.5)+'s';
+    starsEl.appendChild(s);
+  }
+
+  function showScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  // ---------- 1. PASSWORD ----------
+  const pwInput = document.getElementById('password-input');
+  const pwError = document.getElementById('password-error');
+
+  function checkPassword(){
+    const digits = pwInput.value.replace(/\D/g,'');
+    if(digits === PASSWORD_DIGITS){
+      pwError.textContent = '';
+      showScreen('screen-message');
+    } else {
+      pwError.textContent = "That's not quite it — try again.";
+    }
+  }
+  document.getElementById('unlock-btn').addEventListener('click', checkPassword);
+  pwInput.addEventListener('keydown', e => { if(e.key === 'Enter') checkPassword(); });
+
+  // ---------- 2. MESSAGE ----------
+  const msgBox = document.getElementById('message-box');
+  if(MESSAGE && MESSAGE.trim().length){
+    msgBox.textContent = MESSAGE;
+  } else {
+    msgBox.textContent = 'Your message will appear here.';
+    msgBox.classList.add('empty');
+  }
+  document.getElementById('to-recap-btn').addEventListener('click', () => showScreen('screen-recap-intro'));
+
+  // ---------- 3 & 4. RECAP (auto-playing slideshow) ----------
+  const RECAP_INTERVAL_MS = 2800; // how long each photo stays on screen
+  let recapIndex = 0;
+  let recapTimer = null;
+  const recapFrame = document.getElementById('recap-frame');
+  const recapCounter = document.getElementById('recap-counter');
+
+  function renderRecap(){
+    recapCounter.textContent = (recapIndex+1) + ' / ' + PHOTOS.length;
+    const src = PHOTOS[recapIndex];
+    recapFrame.classList.remove('fade-in');
+    if(src && src.trim().length){
+      recapFrame.innerHTML = '<img src="'+src+'" alt="Memory '+(recapIndex+1)+'">';
+    } else {
+      recapFrame.innerHTML = '<div class="placeholder">Photo '+(recapIndex+1)+'</div>';
+    }
+    void recapFrame.offsetWidth; // restart animation
+    recapFrame.classList.add('fade-in');
+    document.getElementById('recap-prev').style.visibility = recapIndex === 0 ? 'hidden' : 'visible';
+    document.getElementById('recap-next').textContent = recapIndex === PHOTOS.length-1 ? 'Skip' : 'Next';
+  }
+
+  function advanceRecap(){
+    if(recapIndex < PHOTOS.length - 1){
+      recapIndex++;
+      renderRecap();
+    } else {
+      stopRecapAutoplay();
+      showScreen('screen-chapter');
+    }
+  }
+
+  function startRecapAutoplay(){
+    stopRecapAutoplay();
+    recapTimer = setInterval(advanceRecap, RECAP_INTERVAL_MS);
+  }
+
+  function stopRecapAutoplay(){
+    clearInterval(recapTimer);
+    recapTimer = null;
+  }
+
+  document.getElementById('start-recap-btn').addEventListener('click', () => {
+    recapIndex = 0;
+    renderRecap();
+    showScreen('screen-recap');
+    startRecapAutoplay();
+  });
+
+  // Manual buttons still work — they just jump the photo and
+  // restart the auto-advance timer from that point.
+  document.getElementById('recap-next').addEventListener('click', () => {
+    advanceRecap();
+    if(recapTimer) startRecapAutoplay();
+  });
+
+  document.getElementById('recap-prev').addEventListener('click', () => {
+    if(recapIndex > 0){
+      recapIndex--;
+      renderRecap();
+      startRecapAutoplay();
+    }
+  });
+
+  // ---------- 5. CHAPTER 22 ----------
+  document.getElementById('to-cake-btn').addEventListener('click', () => showScreen('screen-cake'));
+
+  // ---------- 6. CANDLE BLOW ----------
+  const candle = document.getElementById('candle');
+  const fill = document.getElementById('blow-fill');
+  const instruction = document.getElementById('cake-instruction');
+  let holdTimer = null;
+  let progress = 0;
+  let done = false;
+
+  function resetHold(){
+    clearInterval(holdTimer);
+    progress = 0;
+    fill.style.width = '0%';
+  }
+
+  function startHold(){
+    if(done) return;
+    resetHold();
+    holdTimer = setInterval(() => {
+      progress += 4;
+      fill.style.width = Math.min(progress,100) + '%';
+      if(progress >= 100){
+        clearInterval(holdTimer);
+        blowOut();
+      }
+    }, 40);
+  }
+
+  function blowOut(){
+    done = true;
+    candle.classList.add('out');
+    instruction.textContent = 'Wish made. Here we go…';
+    setTimeout(() => {
+      showScreen('screen-final');
+      launchFinal();
+    }, 1400);
+  }
+
+  candle.addEventListener('mousedown', startHold);
+  candle.addEventListener('touchstart', (e)=>{ e.preventDefault(); startHold(); }, {passive:false});
+  ['mouseup','mouseleave','touchend','touchcancel'].forEach(evt => {
+    candle.addEventListener(evt, resetHold);
+  });
+
+  // ---------- 7. FINAL ----------
+  const finalHeading = document.getElementById('final-heading');
+  const finalName = document.getElementById('final-name');
+
+  function launchFinal(){
+    finalHeading.textContent = 'Happy Birthday';
+    finalName.textContent = (NAME && NAME.trim().length) ? NAME : '';
+    confettiBurst();
+  }
+
+  function confettiBurst(){
+    const colors = ['#e0405a','#ff9eb0','#ff7a8f','#fdf0ee','#7a1f3d'];
+    for(let i=0;i<70;i++){
+      const c = document.createElement('div');
+      c.className = 'confetti-piece';
+      const size = 6 + Math.random()*6;
+      c.style.width = size+'px';
+      c.style.height = (size*0.4)+'px';
+      c.style.left = Math.random()*100+'vw';
+      c.style.background = colors[Math.floor(Math.random()*colors.length)];
+      c.style.animationDuration = (2.5 + Math.random()*2)+'s';
+      c.style.animationDelay = (Math.random()*0.6)+'s';
+      document.body.appendChild(c);
+      setTimeout(()=>c.remove(), 5200);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
